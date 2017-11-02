@@ -4,7 +4,9 @@ $(".view1").hide();
   $.when($(".title").delay(2000).fadeOut(2000)).done(function(){
   	$("div.container").remove();
   	$(".view1").show();
+  	$("input[name='pounds']").focus();
   });
+
   
   
 

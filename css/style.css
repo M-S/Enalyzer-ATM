@@ -127,3 +127,39 @@ body {
     font-weight: 300;
 
 }
+
+.pound-input input:focus{
+    outline:none;
+}
+
+.number-keys{
+    border: 1px solid white;
+    width:70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color:transparent;
+    display: inline-block;
+    margin: 4px;
+}
+.number-keys p{
+    text-align: center;
+    margin: 15px 0 ;
+   
+}
+
+.keys-col{
+    /**margin-left:40%;**/
+    margin: 0 auto;
+    width: 22%;
+}
+
+.submit-button{
+    border: 1px solid white;
+    width:100%;
+    height: 60px;
+    border-radius: 35px;
+    background-color:transparent;
+    text-align: center;
+    margin-top: 20%;
+    padding-top:10px;
+}
