@@ -11,8 +11,119 @@
 }*/
 
 body {
-    font-family:"Helvetica Neue",Helvetica,Arial,Sans-serif
+    font-family:'Helvetica Neue',Helvetica,Arial,Sans-serif;
     color: white;
     background-color: #2bbed3;
     font-weight: 300;
+    font-size:40px;
+    height:100vh;margin: 0;
+}
+.grid {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding:0;
+}
+.col-1 {
+    width: 8.33%;
+    height: 60px;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+.container{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+.title{
+    font-size:15vh;
+    color:white;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+
+.hidden{
+    display:none;
+}
+
+.view1{
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.div-center{
+    margin: 0 auto;
+}
+
+.pound-input{
+    font-size: 80px;
+
+}
+.pound-input input{
+    -webkit-appearance: none;
+   -webkit-border-radius: 0;
+    border:none;
+    width:20%;
+    font-size:80px;
+    margin-top:0;
+    font-family:'Helvetica Neue',Helvetica,Arial,Sans-serif;
+    color: white;
+    background-color: #2bbed3;
+    font-weight: 300;
+
 }
