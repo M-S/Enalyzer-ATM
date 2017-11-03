@@ -7,24 +7,23 @@ function select(item) {
 
 		number = number + item;
 		console.log("value Selected:"+number);
-		if(number.length <= 5){
+		if(number <= 100000){
 		var element = document.getElementById('amount');
 		element.innerHTML = number;
 		} else{
 			number = number.slice(0,-1);
-			alert("You cannot select more !!");
+			alert("You cannot select more than £100,000 !!");
 		}
 	};
 
 // When Clear key is selected
 function clearValue(){
-	console.log("Clear!!")
+	console.log("Clear!!");
 	number = number.slice(0,-1);
 	console.log("after clearíng number:"+number);
-	if(number.length <= 5){
-		var element = document.getElementById('amount');
-		element.innerHTML = number;
-		}
+	var element = document.getElementById('amount');
+	element.innerHTML = number;
+		
 }	
 
 // On clicking Submit button
@@ -51,7 +50,7 @@ if(denom == 1000 || denom == 500 || denom == 100 || denom == 50 ){
 	var parent = document.createElement("div");
 	parent.className = "notesDeposited row";
 	var designOuter = document.createElement("div");
-	designOuter.className = ('noteDesignOuter col-6');
+	designOuter.className = ('noteDesignOuter sm-5');
 	parent.appendChild(designOuter);
 
 	var designInner = document.createElement("div");
@@ -59,7 +58,7 @@ if(denom == 1000 || denom == 500 || denom == 100 || denom == 50 ){
 	designOuter.appendChild(designInner);
 
 	var notesElement = document.createElement("div");
-	notesElement.className = ('col-6');
+	notesElement.className = ('sm-7');
 	parent.appendChild(notesElement);
 
 	var text = document.createElement("p");
@@ -75,7 +74,7 @@ if(denom == 20 || denom == 5 || denom == 2 ){
 	var parent1 = document.createElement("div");
 	parent1.className = "coinsDeposited row";
 	var designOuter1 = document.createElement("div");
-	designOuter1.className = ('coinDesignOuter col-6');
+	designOuter1.className = ('coinDesignOuter sm-5');
 	parent1.appendChild(designOuter1);
 
 	var designInner1 = document.createElement("div");
@@ -83,7 +82,7 @@ if(denom == 20 || denom == 5 || denom == 2 ){
 	designOuter1.appendChild(designInner1);
 
 	var notesElement1 = document.createElement("div");
-	notesElement1.className = ('col-6');
+	notesElement1.className = ('sm-7');
 	parent1.appendChild(notesElement1);
 
 	var text1 = document.createElement("p");
@@ -99,7 +98,7 @@ if(denom == 10 || denom == 1){
 	var parent2 = document.createElement("div");
 	parent2.className = "coinsDeposited row";
 	var designOuter2 = document.createElement("div");
-	designOuter2.className = ('coinDesignOuter col-6');
+	designOuter2.className = ('coinDesignOuter sm-5');
 	parent2.appendChild(designOuter2);
 
 	var designInner2 = document.createElement("div");
@@ -107,7 +106,7 @@ if(denom == 10 || denom == 1){
 	designOuter2.appendChild(designInner2);
 
 	var notesElement2 = document.createElement("div");
-	notesElement2.className = ('col-6');
+	notesElement2.className = ('sm-7');
 	parent2.appendChild(notesElement2);
 
 	var text2 = document.createElement("p");

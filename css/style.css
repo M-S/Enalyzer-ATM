@@ -33,53 +33,59 @@ p{
     margin: 0;
     padding:0;
 }
-.col-1 {
+.col-1, .sm-1 {
     width: 8.33%;
-    height: 60px;
 }
 
-.col-2 {
+.col-2, .sm-2 {
     width: 16.66%;
 }
 
-.col-3 {
+.col-3, .sm-3 {
     width: 25%;
 }
 
-.col-4 {
+.col-4, .sm-4 {
     width: 33.33%;
 }
 
-.col-5 {
+.col-5, .sm-5 {
     width: 41.66%;
 }
 
-.col-6 {
+.col-6, .sm-6 {
     width: 50%;
 }
 
-.col-7 {
+.col-7, .sm-7 {
     width: 58.33%;
 }
 
-.col-8 {
+.col-8, .sm-8 {
     width: 66.66%;
 }
 
-.col-9 {
+.col-9, .sm-9 {
     width: 75%;
 }
 
-.col-10 {
+.col-10, .sm-10 {
     width: 83.33%;
 }
 
-.col-11 {
+.col-11, .sm-11 {
     width: 91.66%;
 }
 
-.col-12 {
+.col-12, .sm-12 {
     width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
 }
 .container{
     min-height:100vh;
@@ -88,7 +94,7 @@ p{
     justify-content: center;
 }
 .title{
-    font-size:15vh;
+    font-size:15vw;
     color:white;
     font-weight: bold;
     text-align: center;
@@ -96,7 +102,18 @@ p{
 }
 
 .hidden{
-    display:none;
+    border: 1px solid transparent;
+    width:70px;
+    height: 50px;
+    border-radius:50%;
+    background-color:transparent;
+    display: inline-block;
+
+}
+.hidden p{
+    text-align: center;
+    margin: 15px 0 ;
+   
 }
 
 .view1{
@@ -113,13 +130,12 @@ p{
     margin: 0 auto;
 }
 
-.pound-input{
+#poundSymbol, #amount, #deposit-amount{
     font-size: 80px;
-
 }
 .blinking-cursor {
   font-weight: 100;
-  font-size: 40px;
+  font-size: 80px;
   color: white;
   -webkit-animation: 1s blink step-end infinite;
   -moz-animation: 1s blink step-end infinite;
@@ -199,18 +215,18 @@ p{
 .keys-col{
     /**margin-left:40%;**/
     margin: 0 auto;
-    width: 22%;
+    /**width: 22%;**/
 }
 
 .submit-button{
     border: 1px solid white;
-    width:100%;
-    height: 60px;
+    width:220px;
+    height: 50px;
     border-radius: 35px;
     background-color:transparent;
     text-align: center;
-    margin-top: 20%;
-    padding-top:10px;
+    margin: 35px auto;
+    padding-top:8px;
     font-color: white;opacity: 0.7;
     font-size:40px;
 }
@@ -222,11 +238,33 @@ p{
 }
 
 .material-icons.md-36 { font-size: 36px; }
+.material-icons.md-32 { font-size: 32px; }
+
 
 .view2{
     margin: 0 auto;
     max-width: 1200px;
     width: 100%;
+}
+
+.backButton{
+    margin: 45px auto 0; 
+    border: 2px solid white;
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color:transparent;
+    text-align: center;
+}
+.backButton i{
+    margin-top: 2px;
+}
+.backButton:hover, .backButton:active{
+    background-color: white;
+    cursor:pointer;
+}
+.backButton:hover i, .backButton:active i{
+    color:#2bbed3;
 }
 
 .notesDeposited{
@@ -235,7 +273,7 @@ p{
     height: auto;
     background-color:transparent;
     text-align: center;
-    /**margin: 10px;**/
+    margin: 0 auto;
 }
 
 .notesDeposited p{
@@ -263,6 +301,7 @@ p{
     height: auto;
     background-color:transparent;
     text-align: center;
+    margin: 0 auto;
     
 }
 .coinDesignInner{

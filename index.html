@@ -24,42 +24,43 @@
 			</div>
    			<div class="row">
    				<div class="col-12">
-   					<p class="text-center" class="pound-input" >£ <span id="amount" ></span><span class="blinking-cursor">|</span></p>
+   					<p class="text-center" class="pound-input" id="poundSymbol" >£ <span id="amount" ></span><span class="blinking-cursor">|</span></p>
    				</div>
 			</div>
 			
 				<div class="row">
-	   				<div class="col-12 keys-col">
-	   					<div class="number-keys" onclick="select(1)"><p>1</p></div>
-	   					<div class="number-keys" onclick="select(2)"><p>2</p></div>
-	   					<div class="number-keys" onclick="select(3)"><p>3</p></div>
+	   				<div class="keys-col">
+	   					<div class=" col-4 number-keys" onclick="select(1)"><p>1</p></div>
+	   					<div class=" col-4 number-keys" onclick="select(2)"><p>2</p></div>
+	   					<div class=" col-4 number-keys" onclick="select(3)"><p>3</p></div>
 	   				</div>
    				</div>
    				
    				<div class="row">
-	   				<div class="col-12 keys-col">
-	   					<div class="number-keys" onclick="select(4)"><p>4</p></div>
-	   					<div class="number-keys" onclick="select(5)"><p>5</p></div>
-	   					<div class="number-keys" onclick="select(6)"><p>6</p></div>
+	   				<div class="keys-col">
+	   					<div class="col-4 number-keys" onclick="select(4)"><p>4</p></div>
+	   					<div class="col-4 number-keys" onclick="select(5)"><p>5</p></div>
+	   					<div class="col-4 number-keys" onclick="select(6)"><p>6</p></div>
 	   				</div>
    				</div>
    				
    				<div class="row">
-	   				<div class="col-12 keys-col">
-	   					<div class="number-keys" onclick="select(7)"><p>7</p></div>
-	   					<div class="number-keys" onclick="select(8)"><p>8</p></div>
-	   					<div class="number-keys" onclick="select(9)"><p>9</p></div>
+	   				<div class="keys-col">
+	   					<div class="col-4 number-keys" onclick="select(7)"><p>7</p></div>
+	   					<div class="col-4 number-keys" onclick="select(8)"><p>8</p></div>
+	   					<div class="col-4 number-keys" onclick="select(9)"><p>9</p></div>
 	   				</div>
 	   			</div>
 	   			<div class="row">
-	   				<div class="col-12 keys-col">
-	   					<div class="number-keys" onclick="clearValue()"><p><i class="material-icons md-36">arrow_back</i></p></div>
-	   					<div class="number-keys" onclick="select(0)"><p>0</p></div>
+	   				<div class="keys-col">
+	   					<div class="col-4 number-keys" onclick="clearValue()"><p><i class="material-icons md-36">arrow_back</i></p></div>
+	   					<div class="col-4 number-keys" onclick="select(0)"><p>0</p></div>
+	   					<div class="col-4 hidden"><p></p></div>
 	   					
 	   				</div>
 				</div>
    				<div class="row">
-   					<div class="col-12 keys-col">
+   					<div class="col-12">
    						<div class="submit-button" onclick="submit()">submit</div>
    					</div>
    				</div>		
@@ -70,16 +71,16 @@
   		<!--View 2 Starts-->
   		<div class="view2" id="deposit-view">
   			<div class="row">
-  				<div class="col-1">
-  				  <div class="backButton"><i class="material-icons md-36">arrow_back</i></div>	
+  				<div class="sm-2">
+  				  <div class="backButton"><i class="material-icons md-32">arrow_back</i></div>	
    				</div>
-	   			<div class="col-11">
+	   			<div class="sm-8">
 	   				<p class="text-center">Depositing</p>
    				</div>
 			</div>
 			<div class="row">
 	   			<div class="col-12">
-	   				<p class="text-center">£<span id="deposit-amount"></span></p>
+	   				<p class="text-center" id="poundSymbol">£ <span id="deposit-amount"></span></p>
    				</div>
 			</div>
   			<div class="row">
