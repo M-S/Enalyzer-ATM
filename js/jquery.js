@@ -6,9 +6,17 @@ $(".view2").hide();
   	$("div.container").remove();
   	$(".view1").show();
 	  	$.when($(".submit-button").click(function(){
-	  	$("div.view1").remove();
+	  	$(".view1").hide();
 	  	$(".view2").show();	
 	  }));
   });
+$(".backButton").click(function(){
+		$("#notes").empty();
+	  	$("#coinsLarge").empty();
+	  	$("#coinsSmall").empty();	
+	  	$(".view1").show();
+	  	$(".view2").hide();
+	  });
+
 
 });
