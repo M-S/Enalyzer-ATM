@@ -10,9 +10,12 @@
 
 	</head>
 	<body>
+	<!--Intro Page-->
 	  	<div class="container">
 	  		<h1 class = "title">Enalyzer<br> ATM </h1> 		
    		</div>
+
+   		<!--View 1 Starts-->
    		<div class="view1">
 	   		<div class="row">
 	   			<div class="col-12">
@@ -21,7 +24,7 @@
 			</div>
    			<div class="row">
    				<div class="col-12">
-   					<p class="text-center"><span class="pound-input">£ <input type="text" name="pounds"></span></p>
+   					<p class="text-center" class="pound-input" >£ <span id="amount" ></span><span class="blinking-cursor">|</span></p>
    				</div>
 			</div>
 			
@@ -35,36 +38,50 @@
    				
    				<div class="row">
 	   				<div class="col-12 keys-col">
-	   					<div class="number-keys"><p>4</p></div>
-	   					<div class="number-keys"><p>5</p></div>
-	   					<div class="number-keys"><p>6</p></div>
+	   					<div class="number-keys" onclick="select(4)"><p>4</p></div>
+	   					<div class="number-keys" onclick="select(5)"><p>5</p></div>
+	   					<div class="number-keys" onclick="select(6)"><p>6</p></div>
 	   				</div>
    				</div>
    				
    				<div class="row">
 	   				<div class="col-12 keys-col">
-	   					<div class="number-keys"><p>7</p></div>
-	   					<div class="number-keys"><p>8</p></div>
-	   					<div class="number-keys"><p>9</p></div>
+	   					<div class="number-keys" onclick="select(7)"><p>7</p></div>
+	   					<div class="number-keys" onclick="select(8)"><p>8</p></div>
+	   					<div class="number-keys" onclick="select(9)"><p>9</p></div>
 	   				</div>
 	   			</div>
 	   			<div class="row">
 	   				<div class="col-12 keys-col">
 	   					<div class="number-keys"><p><i class="material-icons md-36">arrow_back</i></p></div>
-	   					<div class="number-keys"><p>0</p></div>
+	   					<div class="number-keys" onclick="select(0)"><p>0</p></div>
 	   					
 	   				</div>
 				</div>
    				<div class="row">
    					<div class="col-12 keys-col">
-   						<div class="submit-button">submit</div>
+   						<div class="submit-button" onclick="submit()">submit</div>
    					</div>
-   				</div>
-			
-			
-	    			
+   				</div>		
 	  			
   		</div> 
+  		<!--View 1 Ends-->
+
+  		<!--View 2 Starts-->
+  		<div class="view2" id="deposit-view">
+  			<div class="row">
+	   			<div class="col-12">
+	   				<p class="text-center">Depositing</p>
+   				</div>
+			</div>
+  			<div class="row">
+	   				<div class="col-4" id="notes"></div>
+	   				<div class="col-4" id="coinsLarge"></div>
+	   				<div class="col-4" id="coinsSmall"></div>
+   				</div>
+
+  		</div>
+  		<!--View 2 Ends-->
    		
 <script src="js/script.js"></script>
 <script src="js/jquery.js"></script>
