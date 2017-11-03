@@ -53,7 +53,7 @@
 	   			</div>
 	   			<div class="row">
 	   				<div class="col-12 keys-col">
-	   					<div class="number-keys"><p><i class="material-icons md-36">arrow_back</i></p></div>
+	   					<div class="number-keys" onclick="clearValue()"><p><i class="material-icons md-36">arrow_back</i></p></div>
 	   					<div class="number-keys" onclick="select(0)"><p>0</p></div>
 	   					
 	   				</div>
@@ -74,11 +74,21 @@
 	   				<p class="text-center">Depositing</p>
    				</div>
 			</div>
+			<div class="row">
+	   			<div class="col-12">
+	   				<p class="text-center">£<span id="deposit-amount"></span></p>
+   				</div>
+			</div>
   			<div class="row">
 	   				<div class="col-4" id="notes"></div>
 	   				<div class="col-4" id="coinsLarge"></div>
 	   				<div class="col-4" id="coinsSmall"></div>
+   			</div>
+   			<div class="row">
+	   			<div class="col-12">
+	   				<p class="text-center">Thank you for using<br> Enalyzer ATM</p>
    				</div>
+			</div>
 
   		</div>
   		<!--View 2 Ends-->

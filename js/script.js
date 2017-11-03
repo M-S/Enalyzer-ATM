@@ -1,27 +1,8 @@
-// On clicking the keypad numbers
+
 var number = "";
-
-var notes= {
-	thousand: 0, 
-	fivehundred: 0, 
-	twohundred: 0, 
-	hundred: 0,
-	fifty: 0 
-}
-
-var coinsLarger20 = {
-	twenty:0,
-	five: 0,
-	two:0
-}
-
-var coinsSmaller20 = {
-	ten: 0,
-	one:0
-}
-
 var denomination = [1000, 500, 100,50,20,10,5,2,1];
 
+// On clicking the keypad numbers
 function select(item) {
 
 		number = number + item;
@@ -30,14 +11,27 @@ function select(item) {
 		var element = document.getElementById('amount');
 		element.innerHTML = number;
 		} else{
+			number = number.slice(0,-1);
 			alert("You cannot select more !!");
 		}
 	};
+
+// When Clear key is selected
+function clearValue(){
+	console.log("Clear!!")
+	number = number.slice(0,-1);
+	console.log("after clearíng number:"+number);
+	if(number.length <= 5){
+		var element = document.getElementById('amount');
+		element.innerHTML = number;
+		}
+}	
 
 // On clicking Submit button
 function submit(){
 	var element = document.getElementById('amount');
 	console.log("Amount Submitted:"+element.innerHTML);
+	document.getElementById('deposit-amount').innerHTML = element.innerHTML;
 	var submitAmt = parseInt(element.innerHTML);
 	for (var i = 0; i < denomination.length; i++) {
 		var count = parseInt(submitAmt/denomination[i]); 
@@ -50,29 +44,81 @@ function submit(){
 	}
 }
 
+//Function to display the different denomination in view2
 function deposit(number, denom){
 
 if(denom == 1000 || denom == 500 || denom == 100 || denom == 50 ){
 	var parent = document.createElement("div");
-	parent.className = "notesDeposited";
-	var notesElement = document.createElement("p");
+	parent.className = "notesDeposited row";
+	var designOuter = document.createElement("div");
+	designOuter.className = ('noteDesignOuter col-6');
+	parent.appendChild(designOuter);
+
+	var designInner = document.createElement("div");
+	designInner.className = ('noteDesignInner');
+	designOuter.appendChild(designInner);
+
+	var notesElement = document.createElement("div");
+	notesElement.className = ('col-6');
 	parent.appendChild(notesElement);
+
+	var text = document.createElement("p");
+	notesElement.appendChild(text);
 	var node = document.createTextNode(number + " X "+ denom);
-	notesElement.appendChild(node);
+	text.appendChild(node);	
+
 	var element = document.getElementById("notes");
 	element.appendChild(parent);
 }
 
 if(denom == 20 || denom == 5 || denom == 2 ){
 	var parent1 = document.createElement("div");
-	parent1.className = "coinsDeposited";
-	var notesElement1 = document.createElement("p");
+	parent1.className = "coinsDeposited row";
+	var designOuter1 = document.createElement("div");
+	designOuter1.className = ('coinDesignOuter col-6');
+	parent1.appendChild(designOuter1);
+
+	var designInner1 = document.createElement("div");
+	designInner1.className = ('coinDesignInner');
+	designOuter1.appendChild(designInner1);
+
+	var notesElement1 = document.createElement("div");
+	notesElement1.className = ('col-6');
 	parent1.appendChild(notesElement1);
+
+	var text1 = document.createElement("p");
+	notesElement1.appendChild(text1);
 	var node1 = document.createTextNode(number + " X "+ denom);
-	notesElement1.appendChild(node1);
+	text1.appendChild(node1);	
+
 	var element1 = document.getElementById("coinsLarge");
 	element1.appendChild(parent1);
 }
 
+if(denom == 10 || denom == 1){
+	var parent2 = document.createElement("div");
+	parent2.className = "coinsDeposited row";
+	var designOuter2 = document.createElement("div");
+	designOuter2.className = ('coinDesignOuter col-6');
+	parent2.appendChild(designOuter2);
+
+	var designInner2 = document.createElement("div");
+	designInner2.className = ('coinDesignInner');
+	designOuter2.appendChild(designInner2);
+
+	var notesElement2 = document.createElement("div");
+	notesElement2.className = ('col-6');
+	parent2.appendChild(notesElement2);
+
+	var text2 = document.createElement("p");
+	notesElement2.appendChild(text2);
+	var node2 = document.createTextNode(number + " X "+ denom);
+	text2.appendChild(node2);	
+
+	var element2 = document.getElementById("coinsSmall");
+	element2.appendChild(parent2);
+}
 
 }
+
+

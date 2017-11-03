@@ -15,8 +15,11 @@ body {
     color: white;
     background-color: #2bbed3;
     font-weight: 300;
-    font-size:40px;
     height:100vh;margin: 0;
+}
+
+p{
+    font-size:40px;
 }
 .grid {
     margin: 0 auto;
@@ -169,23 +172,6 @@ body {
     color: white;
   }
 }
-/**.pound-input input{
--webkit-appearance: none;
-   -webkit-border-radius: 0;
-    border:none;
-    width:40%;
-    font-size:80px;
-    margin-top:0;
-    font-family:'Helvetica Neue',Helvetica,Arial,Sans-serif;
-    color: white;
-    background-color: #2bbed3;
-    font-weight: 300;
-
-}
-
-.pound-input input:focus{
-    outline:none;
-}**/
 
 .number-keys{
     border: 1px solid white;
@@ -226,6 +212,7 @@ body {
     margin-top: 20%;
     padding-top:10px;
     font-color: white;opacity: 0.7;
+    font-size:40px;
 }
 
 .submit-button:hover , .submit-button:active{
@@ -242,14 +229,33 @@ body {
     width: 100%;
 }
 
-
 .notesDeposited{
     border: 1px solid white;
     width:90%;
     height: auto;
     background-color:transparent;
     text-align: center;
-    margin: 10px;
+    /**margin: 10px;**/
+}
+
+.notesDeposited p{
+    /**padding-bottom:10px;**/
+}
+
+.noteDesignInner{
+    border: 1px solid #2bbed3;
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color:#2bbed3;
+    margin: 10px auto;
+}
+.noteDesignOuter{
+    border: 1px solid white;
+    width:100px;
+    height: 60px;
+    background-color:white;
+    margin: 35px auto 40px;
 }
 .coinsDeposited{
     border: 1px solid white;
@@ -257,6 +263,20 @@ body {
     height: auto;
     background-color:transparent;
     text-align: center;
-    margin: 10px;
     
+}
+.coinDesignInner{
+    border: 1px solid white;
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color:white;
+    margin: 10px auto;
+}
+.coinDesignOuter{
+    
+    width:100px;
+    height: 60px;
+    background-color:transparent;
+    margin: 35px auto 40px;
 }
