@@ -8,7 +8,7 @@ https://m-s.github.io/Enalyzer-ATM/
 Or to run the application in local server follow these steps 
 1.git clone the project folder,
 2.cd to project folder in the terminal 
-3.If python(lesser than version 3)  is installed, type the following in terminal
+3.If python(lesser than version 3)  is installed, type the following in terminal:
   python -m SimpleHTTPServer
   
   - This will run the index.html in localhost:8000
