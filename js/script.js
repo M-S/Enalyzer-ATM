@@ -1,12 +1,12 @@
 
-var number = "";
-var denomination = [1000, 500, 100,50,20,10,5,2,1];
+var number = ""; //Variable that stores the amount selected
+var denomination = [1000, 500, 100,50,20,10,5,2,1]; //Array containing all money types
 
 
-// On clicking the keypad numbers
+/*** On clicking the keypad numbers**/
 function select(item) {
 		number = number + item;
-		console.log("value Selected:"+number);
+		//console.log("value Selected:"+number);
 		if(number <= 100000){
 		var element = document.getElementById('amount');
 		element.innerHTML = number;
@@ -16,19 +16,19 @@ function select(item) {
 		}
 	};
 
-// When Clear key is selected
+/*** When Clear key is selected**/
 function clearValue(){
 	console.log("Clear!!");
 	number = number.slice(0,-1);
-	console.log("after clearíng number:"+number);
+	//console.log("after clearíng number:"+number);
 	var element = document.getElementById('amount');
 	element.innerHTML = number;
 }	
 
-// On clicking Submit button
+/*** On clicking Submit button**/
 function submit(){
 	var element = document.getElementById('amount');
-	console.log("Amount Submitted:"+element.innerHTML);
+	//console.log("Amount Submitted:"+element.innerHTML);
 		document.getElementById('deposit-amount').innerHTML = element.innerHTML;
 		var submitAmt = parseInt(element.innerHTML);
 		if(submitAmt>=1){
@@ -37,21 +37,23 @@ function submit(){
 			if(count>=1){
 				console.log( count+"X" + denomination[i]);
 				deposit(count, denomination[i]);
-				submitAmt = submitAmt % denomination[i]; console.log("remainder:"+ submitAmt);
+				submitAmt = submitAmt % denomination[i]; //console.log("remainder:"+ submitAmt);
 			}
 		
 			} 
 			}else{
-				console.log("No amount selected");
+				//console.log("No amount selected");
 				errorMessage();
 		}
 			
 	
 }
 
-//Function to display the different denomination in view2
+/***Function to display the different denomination in view2**/
+
 function deposit(number, denom){
 
+//First Box containing notes
 if(denom == 1000 || denom == 500 || denom == 100 || denom == 50 ){
 	var parent = document.createElement("div");
 	parent.className = "notesDeposited row";
@@ -76,6 +78,7 @@ if(denom == 1000 || denom == 500 || denom == 100 || denom == 50 ){
 	element.appendChild(parent);
 }
 
+//Second Box containing coins larger than 20mm diameter
 if(denom == 20 || denom == 5 || denom == 2 ){
 	var parent1 = document.createElement("div");
 	parent1.className = "coinsDeposited row";
@@ -100,6 +103,7 @@ if(denom == 20 || denom == 5 || denom == 2 ){
 	element1.appendChild(parent1);
 }
 
+//Third Box containing coins smaller than 20mm diameter
 if(denom == 10 || denom == 1){
 	var parent2 = document.createElement("div");
 	parent2.className = "coinsDeposited row";
@@ -126,7 +130,7 @@ if(denom == 10 || denom == 1){
 
 }
 
-
+/***Function to display error message if no amount is selected**/
 function errorMessage(){
 	var message = document.createElement("p");
 	message.className = "text-center";
