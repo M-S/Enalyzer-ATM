@@ -5,12 +5,16 @@ $(".view2").hide();
   $.when($(".title").delay(2000).fadeOut(2000)).done(function(){
   	$("div.container").remove();
   	$(".view1").show();
+  	$(".number-keys").click(function(){
+		$(".submit-button").addClass('active');
+	  });
 	  	$.when($(".submit-button").click(function(){
 	  	$(".view1").hide();
 	  	$(".view2").show();	
 	  }));
   });
 $(".backButton").click(function(){
+	    $("#error").empty();
 		$("#notes").empty();
 	  	$("#coinsLarge").empty();
 	  	$("#coinsSmall").empty();	

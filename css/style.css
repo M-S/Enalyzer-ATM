@@ -86,6 +86,7 @@ p{
     [class*="col-"] {
         width: 100%;
     }
+
 }
 .container{
     min-height:100vh;
@@ -218,7 +219,7 @@ p{
     /**width: 22%;**/
 }
 
-.submit-button{
+.submit-button {
     border: 1px solid white;
     width:220px;
     height: 50px;
@@ -231,12 +232,14 @@ p{
     font-size:40px;
 }
 
-.submit-button:hover , .submit-button:active{
+.submit-button.active{
+    color: white; opacity:1;
+}
+.submit-button.active:hover, .submit-button.active:active{
     background-color: white; opacity:1;
     cursor: pointer;
     color:#2bbed3 ;
 }
-
 .material-icons.md-36 { font-size: 36px; }
 .material-icons.md-32 { font-size: 32px; }
 
@@ -248,7 +251,7 @@ p{
 }
 
 .backButton{
-    margin: 45px auto 0; 
+    margin: 43px auto 0; 
     border: 2px solid white;
     width:40px;
     height: 40px;

@@ -2,9 +2,9 @@
 var number = "";
 var denomination = [1000, 500, 100,50,20,10,5,2,1];
 
+
 // On clicking the keypad numbers
 function select(item) {
-
 		number = number + item;
 		console.log("value Selected:"+number);
 		if(number <= 100000){
@@ -23,24 +23,30 @@ function clearValue(){
 	console.log("after clearíng number:"+number);
 	var element = document.getElementById('amount');
 	element.innerHTML = number;
-		
 }	
 
 // On clicking Submit button
 function submit(){
 	var element = document.getElementById('amount');
 	console.log("Amount Submitted:"+element.innerHTML);
-	document.getElementById('deposit-amount').innerHTML = element.innerHTML;
-	var submitAmt = parseInt(element.innerHTML);
-	for (var i = 0; i < denomination.length; i++) {
-		var count = parseInt(submitAmt/denomination[i]); 
-		if(count>=1){
-			console.log( count+"X" + denomination[i]);
-			deposit(count, denomination[i]);
-			submitAmt = submitAmt % denomination[i]; console.log("remainder:"+ submitAmt);
-		}
+		document.getElementById('deposit-amount').innerHTML = element.innerHTML;
+		var submitAmt = parseInt(element.innerHTML);
+		if(submitAmt>=1){
+			for (var i = 0; i < denomination.length; i++) {
+				var count = parseInt(submitAmt/denomination[i]); 
+			if(count>=1){
+				console.log( count+"X" + denomination[i]);
+				deposit(count, denomination[i]);
+				submitAmt = submitAmt % denomination[i]; console.log("remainder:"+ submitAmt);
+			}
 		
-	}
+			} 
+			}else{
+				console.log("No amount selected");
+				errorMessage();
+		}
+			
+	
 }
 
 //Function to display the different denomination in view2
@@ -121,3 +127,11 @@ if(denom == 10 || denom == 1){
 }
 
 
+function errorMessage(){
+	var message = document.createElement("p");
+	message.className = "text-center";
+	var node = document.createTextNode("ERROR !! No amount was selected");
+	message.appendChild(node);	
+	var element = document.getElementById("error");
+	element.appendChild(message);
+}
